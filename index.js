@@ -17,15 +17,13 @@ const TRANSITION_TIME = PULSE_TIME_MS/100; // is in 100ms, weirdly enough
 const BRI_LO = parseInt(process.env.BRI_LO);
 const BRI_HI = parseInt(process.env.BRI_HI);
 
-console.log("Initiating, pulse time ms and transition time are:", PULSE_TIME_MS, TRANSITION_TIME);
-
 // Defaults for success/failure and returning to normal
-const DEFAULT_HUE = process.env.DEFAULT_HUE;
-const SUCCESS_HUE = process.env.SUCCESS_HUE;
-const FAILURE_HUE = process.env.FAILURE_HUE;
+const DEFAULT_HUE = parseInt(process.env.DEFAULT_HUE);
+const SUCCESS_HUE = parseInt(process.env.SUCCESS_HUE);
+const FAILURE_HUE = parseInt(process.env.FAILURE_HUE);
 const DEFAULT_STATE= {
     on: process.env.DEFAULT_ON,
-    hue: process.env.DEFAULT_HUE,
+    hue: parseInt(process.env.DEFAULT_HUE),
     bri: parseInt(process.env.DEFAULT_BRI),
     sat: parseInt(process.env.DEFAULT_SAT),
 }
